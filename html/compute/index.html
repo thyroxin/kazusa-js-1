@@ -1,0 +1,32 @@
+<div style="display: flex;">
+  <input id="item-1" type="number">
+  <input id="item-2" type="number">
+</div>
+<div style="display: flex;">
+  <button id="plus">＋</button>
+  <button id="minus">ー</button>
+  <button id="multiply">×</button>
+  <button id="divide">÷</button>
+</div>
+<div id="answer" style="border: 1px solid; width: 100px; height: 20px;"></div>
+<script>
+  const itemOne = document.getElementById("item-1")
+  const itemTwo = document.getElementById("item-2")
+  const plusEl = document.getElementById("plus")
+  const minusEl = document.getElementById("minus")
+  const multiplyEl = document.getElementById("multiply")
+  const divideEl = document.getElementById("divide")
+  const answerEl = document.getElementById("answer")
+  plusEl.addEventListener("click", () =>{
+    answerEl.innerText = parseInt(itemOne.value) + parseInt(itemTwo.value)
+  })
+  minusEl.addEventListener("click", () =>{
+    answerEl.innerText = parseInt(itemOne.value) - parseInt(itemTwo.value)
+  })
+  multiplyEl.addEventListener("click", () =>{
+    answerEl.innerText = parseInt(itemOne.value) * parseInt(itemTwo.value)
+  })
+  divideEl.addEventListener("click", () =>{
+    answerEl.innerText = parseInt(itemOne.value) / parseInt(itemTwo.value)
+  })
+</script>
